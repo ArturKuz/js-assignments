@@ -23,7 +23,14 @@
  *    console.log(r.getArea());   // => 200
  */
 function Rectangle(width, height) {
-    throw new Error('Not implemented');
+    // throw new Error('Not implemented');
+    let r = { 
+        width: width,
+        height: height, 
+        getArea: function(){
+            return this.height* this.width;
+    }}
+    return r ;
 }
 
 

@@ -30,8 +30,24 @@
  *
  */
 function getFizzBuzz(num) {
-    throw new Error('Not implemented');
-}
+    // throw new Error('Not implemented');    
+    let x = +num;
+    switch (true) {
+        case (x % 5 === 0 && x % 3 === 0):
+            return("FizzBuzz");
+            break;
+        case x % 3 === 0:
+            return("Fizz");
+            break;
+        case x % 5 === 0:
+            return("Buzz");
+            break;
+        default:
+            return(x);
+            break;
+      }
+    };
+
 
 
 /**
@@ -46,8 +62,12 @@ function getFizzBuzz(num) {
  *   10 => 3628800
  */
 function getFactorial(n) {
-    throw new Error('Not implemented');
-}
+    // throw new Error('Not implemented');
+    let res = 1;
+        while (n--)   
+            res *= n + 1
+        return res;
+    }
 
 
 /**
@@ -63,7 +83,15 @@ function getFactorial(n) {
  *   -1,1  =>  0  ( = -1 + 0 + 1 )
  */
 function getSumBetweenNumbers(n1, n2) {
-    throw new Error('Not implemented');
+    // throw new Error('Not implemented');
+    let sum = 0;
+    while(n1 <= n2){       
+        sum+=n1;  
+        n1++;
+     }
+  
+    return (sum);
+  
 }
 
 
@@ -82,7 +110,11 @@ function getSumBetweenNumbers(n1, n2) {
  *   10,10,10 =>  true
  */
 function isTriangle(a,b,c) {
-    throw new Error('Not implemented');
+    // throw new Error('Not implemented');
+    if (a + b > c && a + c > b && b + c > a)
+    {return true;}
+    {return false;}
+
 }
 
 
@@ -209,7 +241,10 @@ function getIntervalString(a, b, isStartIncluded, isEndIncluded) {
  * 'noon' => 'noon'
  */
 function reverseString(str) {
-    throw new Error('Not implemented');
+    // throw new Error('Not implemented');
+    let arr = str.split('').reverse().join('');
+    return arr;
+    
 }
 
 
@@ -226,7 +261,10 @@ function reverseString(str) {
  *   34143 => 34143
  */
 function reverseInteger(num) {
-    throw new Error('Not implemented');
+    // throw new Error('Not implemented');
+    num = num+"";
+    let rev = num.split('').reverse().join('');
+    return +rev
 }
 
 
@@ -297,6 +335,7 @@ function getDigitalRoot(num) {
  */
 function isBracketsBalanced(str) {
     throw new Error('Not implemented');
+    
 }
 
 
